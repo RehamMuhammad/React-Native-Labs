@@ -17,6 +17,7 @@ export default function Search() {
     const data = await axios.get(
       'http://www.omdbapi.com/?i=tt3896198&apikey=cae06b86',
     );
+    console.log("reham")
     console.log(data);
   };
 
