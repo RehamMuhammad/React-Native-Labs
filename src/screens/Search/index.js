@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {View} from 'react-native';
-import {SearchBar} from '../../components';
+import {MovieCard, SearchBar} from '../../components';
+import {Header} from '../../components';
 import {getAllMovies} from '../../services';
 import {client} from '../../services/client';
 import styles from './styles';
@@ -14,9 +15,7 @@ export default function Search() {
   }, []);
 
   const _onLoad = async () => {
-    const data = await axios.get(
-      'http://www.omdbapi.com/?i=tt3896198&apikey=cae06b86',
-    );
+    const data = await getAllMovies("me before you");
     console.log("reham")
     console.log(data);
   };
@@ -28,6 +27,8 @@ export default function Search() {
         onChange={val => setValue(val)}
         onPress={() => {}}
       />
+      <Header text={true? 'Search Results' : 'Recent Searches'} />
+      <MovieCard />
     </View>
   );
 }

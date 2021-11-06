@@ -11,7 +11,7 @@ client.interceptors.request.use(config => {
     ...config,
     params: {
       ...config.params,
-      apikey: '3c93bf24',
+      apikey: 'cae06b86',
       type: 'movie',
     },
   };

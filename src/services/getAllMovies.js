@@ -9,5 +9,7 @@ export const getAllMovies = async query => {
     console.log(data);
   } catch (error) {
     console.log(error);
+    return [];
+
   }
 };

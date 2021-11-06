@@ -25,7 +25,6 @@ const App = () => {
           backgroundColor: COLORS.oxfordBlue,
         }}>       
         <SearchScreen />
-        <Text style={{color: 'white'}}>ٍSearch Results</Text>
 
       </View>
       </>
