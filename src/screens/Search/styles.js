@@ -6,8 +6,5 @@ export default StyleSheet.create({
     backgroundColor: COLORS.oxfordBlue,
     width: '100%',
     paddingHorizontal: 16,
-  },
-  KyrollsText: {
-    color: COLORS.white,
-  },
+  }
 });

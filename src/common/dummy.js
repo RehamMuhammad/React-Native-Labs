@@ -63,3 +63,6 @@ const dummy_data = [
             "Poster": "https://m.media-amazon.com/images/M/MV5BNTY4MDU3ODE2MF5BMl5BanBnXkFtZTgwMzQ3NTM0NzE@._V1_SX300.jpg"
         }
     ];
+
+
+    export {dummy_data};

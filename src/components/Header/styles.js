@@ -6,9 +6,9 @@ export default StyleSheet.create({
         marginTop:20,
     },
     headerText: {
-        fontFamily:FONTS.medium,
+        fontFamily:FONTS.bold,
         color:COLORS.white,
-        fontSize:16,
+        fontSize:18,
     },
     divider:{
         width:155,
