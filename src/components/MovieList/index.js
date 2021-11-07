@@ -1,15 +1,22 @@
 
 import React from 'react';
+import { FlatList } from 'react-native';
+import { MovieCard } from '..';
+import styles from './styles';
 
 
 
-function MovieList() {
-
+function MovieList({data}) {
+const renderItem = ({item}) => <MovieCard data={item} />
     return (
-        <div>
+        <FlatList
+        data={data}
+        renderItem={renderItem}
+        contentContainerStyle={styles.contentContainerStyle}
+
+        />
             
-        </div>
     )
 }
 
-export default MovieList;
+export {MovieList};
