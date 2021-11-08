@@ -6,7 +6,11 @@ export const getAllMovies = async query => {
   };
   try {
     const {data} = await client.get('/', {params});
-    console.log(data);
+    if(data.Response === "True"){
+      console.log(data);
+      return data.Search
+
+    }
   } catch (error) {
     console.log(error);
     return [];

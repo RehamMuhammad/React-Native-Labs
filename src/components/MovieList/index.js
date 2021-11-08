@@ -13,6 +13,7 @@ const renderItem = ({item}) => <MovieCard data={item} />
         data={data}
         renderItem={renderItem}
         contentContainerStyle={styles.contentContainerStyle}
+        showsVerticalScrollIndicator={false}
 
         />
             
