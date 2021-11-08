@@ -10,4 +10,7 @@ export default StyleSheet.create({
   topView:{
     paddingHorizontal: 16,
   },
+  activityIndicator:{
+   marginTop:150
+  }
 });
