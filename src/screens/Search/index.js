@@ -45,7 +45,7 @@ console.log(movies)
 //On Press Movie
 const onPressMovie = (movie) => {
   dispatch(storeMovie(movie))
-  navigation.navigate('Movie')
+  navigation.navigate('Movie', {id: movie.imdbID})
 
 }
 

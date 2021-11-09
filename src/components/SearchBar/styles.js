@@ -10,7 +10,6 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 20,
     overflow: 'hidden',
   },
   inputContainer: {
@@ -20,7 +19,7 @@ export default StyleSheet.create({
     fontFamily: FONTS.medium,
     height: '100%',
     fontSize: 16,
-    color: COLORS.white,
+    color:COLORS.white
   },
   iconContainer: {
     borderStartColor: COLORS.sun,
