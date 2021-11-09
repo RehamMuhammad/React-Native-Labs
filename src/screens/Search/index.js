@@ -47,11 +47,21 @@ const onPressMovie = (movie) => {
 }
 
 
-  //handle the serch keyword using search input value
+  //handle the search keyword using search input value
   const onChangeText = async (_vaule) => {
     setValue(_vaule);
     await getData(_vaule);
   }
+
+  //handle the search keyword using search icon button
+  const onPressSearch = async () => {
+    setLoading(true)
+    const data = await getAllMovies(value)
+    setData(data)
+    setLoading(false)
+
+  }
+
 
   return (
     <View style={styles.container}>
@@ -59,11 +69,11 @@ const onPressMovie = (movie) => {
       <SearchBar
        value={value} 
         onChange={(val) => onChangeText(val)}
-        onPress={() => {}}
+        onPress={() => onPressSearch()}
       />
       <Header text={!data ? 'Recent Searches' : 'Search Results' } />
       </View>
-      {loading? <ActivityIndicator color={COLORS.sun} style={styles.activityIndicator}/> : <MovieList data={data} onPress={(item) => onPressMovie(item)} /> }
+      {loading? <ActivityIndicator color={COLORS.sun} style={styles.activityIndicator}/> : <MovieList data={!data ? movies: data} onPress={(item) => onPressMovie(item)} /> }
     </View>
   );
 }
