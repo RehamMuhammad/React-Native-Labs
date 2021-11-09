@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import styles from './styles';
 import {dummy_data, IMAGES} from '../../common'
 import FastImage from 'react-native-fast-image';
 
 
-const MovieCard = ({data}) => {
+const MovieCard = ({data, onPress}) => {
     return (
-        <View style={styles.container}> 
+        <Pressable style={styles.container} onPress={onPress}> 
             <View style={styles.leftContainer}/>
             <View style={styles.rightContainer}>
             <View style={styles.contentContainer} >
@@ -23,7 +23,7 @@ const MovieCard = ({data}) => {
                 }
                style={styles.images}
           />
-        </View>
+        </Pressable>
     )
 }
 

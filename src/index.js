@@ -3,6 +3,11 @@ import {SafeAreaView, Text, StatusBar, View} from 'react-native';
 import { COLORS } from './common/colors';
 import { SearchScreen } from './screens';
 
+//redux imports
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './store';
+
 
 
 const App = () => {
@@ -17,7 +22,8 @@ const App = () => {
   // }, []);
  
   return (
-    <>
+    <Provider store={store}>
+      <PersistGate persistor={persistor} >
      <StatusBar barStyle={'light-content'} />
         <View
         style={{
@@ -27,7 +33,8 @@ const App = () => {
         <SearchScreen />
 
       </View>
-      </>
+      </PersistGate>
+      </Provider>
   );
 };
 
