@@ -11,13 +11,15 @@ import _ from 'lodash'
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { useDispatch, useSelector } from 'react-redux';
 import {storeMovie} from "../../store/actions"
+import { useNavigation } from '@react-navigation/native';
 
 export default function Search() {
   const [value, setValue] = useState('');
   const [data, setData] = useState([]);
   const[loading, setLoading] = useState(false);
  const dispatch = useDispatch();
- const movies = useSelector(state => state.movies)
+ const movies = useSelector(state => state.movies);
+ const navigation = useNavigation();
 
 console.log(movies)
   // useEffect(() => {
@@ -43,6 +45,7 @@ console.log(movies)
 //On Press Movie
 const onPressMovie = (movie) => {
   dispatch(storeMovie(movie))
+  navigation.navigate('Movie')
 
 }
 

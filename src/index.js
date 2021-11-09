@@ -7,6 +7,7 @@ import { SearchScreen } from './screens';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store';
+import AppContainer from './navigation';
 
 
 
@@ -25,14 +26,13 @@ const App = () => {
     <Provider store={store}>
       <PersistGate persistor={persistor} >
      <StatusBar barStyle={'light-content'} />
-        <View
+        <SafeAreaView
         style={{
           flex: 1,
           backgroundColor: COLORS.oxfordBlue,
-        }}>       
-        <SearchScreen />
-
-      </View>
+        }}>   
+        <AppContainer />    
+      </SafeAreaView>
       </PersistGate>
       </Provider>
   );
