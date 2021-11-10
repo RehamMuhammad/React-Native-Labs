@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     backgroundColor:COLORS.spaceCadet,
     flexDirection:'row',
-    height: 250,
+    height: 200,
   },
   leftContainer:{
       backgroundColor:COLORS.spaceCadet,
@@ -35,10 +35,10 @@ export default StyleSheet.create({
     },
     images:{
       width:130,
-      height:190,
+      height:170,
       position:'absolute',
       borderRadius:15,
-      bottom:37,
+      bottom:17,
       left:15
     }
 });
