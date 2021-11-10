@@ -35,6 +35,8 @@ export default StyleSheet.create({
     },
     images:{
       width:130,
+      borderColor:COLORS.sun,
+      borderWidth:2,
       height:170,
       position:'absolute',
       borderRadius:15,

@@ -5,7 +5,7 @@ export default StyleSheet.create({
   container: {
     backgroundColor:COLORS.spaceCadet,
     height: 120,
-    marginTop: 15,
+    marginTop: 20,
   },
   ratingContainer:{
       backgroundColor:COLORS.spaceCadet,

@@ -1,10 +1,11 @@
 import { useRoute } from '@react-navigation/native';
 import React, {useEffect, useState} from 'react';
-import {View,Text} from 'react-native';
+import {View,Text, ScrollView} from 'react-native';
 import { getMovieDetails } from '../../services/getMovieDetails';
 import {MovieInfo} from '../../components/MovieInfo/'
 import {MovieRating} from '../../components/MovieRating/'
 import {MovieSummary} from '../../components/MovieSummary/'
+import styles from '../../components/MovieInfo/styles';
 
 
 const Movie = () => {
@@ -27,13 +28,13 @@ useEffect(() => {
 }, [])
 
   return (
-        <View>
-            <Text>{'Movie Screen'}</Text>
+        <ScrollView>
            <MovieInfo movieData={movieData}/>
            <MovieRating movieData={movieData} />
            <MovieSummary headline="Summary" movieData={movieData.Plot} />
-
-        </View>
+           <MovieSummary headline="Director" movieData={movieData.Director} />
+           <MovieSummary headline="Actors" movieData={movieData.Actors} />
+        </ScrollView>
     )
 }
 
