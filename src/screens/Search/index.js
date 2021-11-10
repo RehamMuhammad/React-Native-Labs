@@ -76,7 +76,7 @@ const onPressMovie = (movie) => {
       />
       <Header text={!data ? 'Recent Searches' : 'Search Results' } />
       </View>
-      {loading? <ActivityIndicator color={COLORS.sun} style={styles.activityIndicator}/> : <MovieList data={!data ? movies: data} onPress={(item) => onPressMovie(item)} /> }
+      {loading? <ActivityIndicator color={COLORS.sun} style={styles.activityIndicator}/> : <MovieList data={!data || value=="" ? movies: data} onPress={(item) => onPressMovie(item)} /> }
     </View>
   );
 }

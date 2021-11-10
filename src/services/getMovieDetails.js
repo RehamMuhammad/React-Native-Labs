@@ -1,6 +1,6 @@
 import {client} from './client';
 
-export const getMovieDetails = async (id) => {
+export const getMovieDetails = async id => {
   const params = {
     i: id,
     plot: 'full',
@@ -9,7 +9,7 @@ export const getMovieDetails = async (id) => {
     const {data} = await client.get('/', {params});
     if(data.Response === "True"){
       console.log(data);
-      return data.Title
+      return data
 
     }
   } catch (error) {
